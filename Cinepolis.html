@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="img/cinepolislogo.png">
+        <title>Cinépolis</title>
+        <style>
+            body, select,input
+            {
+                background-color: black;
+                color: white;
+            }
+            h1, h3
+            {
+                text-align: center;
+            }
+            table
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+        style="background-color: darkblue; font-family: Arial, Helvetica, sans-serif; font-size: 100px; height: 150px; text-align: center; tex;">
+        <img src="img/cinepolislogosinfondo.png" alt="logo" style="height: 150px; "></div>
+
+        <h1>Cartelera</h1>
+        <table align="center" style="height: 500px; width: 500px;">
+            <tr>
+                <td>
+                    <a href="img/cartelera1.jpg" target="peli"><img src="img/cartelera1.jpg" alt="cartelera1"></a>
+                </td>
+                <td>
+                    <a href="img/cartelera2.jpg" target="peli"><img src="img/cartelera2.jpg" alt="cartelera2"></a>
+                </td>
+                <td>
+                    <a href="img/cartelera3.jpg" target="peli"><img src="img/cartelera3.jpg" alt="cartelera3"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="img/cartelera4.jpg" target="peli"><img src="img/cartelera4.jpg" alt="cartelera4"></a>
+                </td>
+                <td>
+                    <a href="img/cartelera5.jpg" target="peli"><img src="img/cartelera5.jpg" alt="cartelera5"></a>
+                </td>
+                <td>
+                    <a href="img/cartelera6.jpg" target="peli"><img src="img/cartelera6.jpg" alt="cartelera6"></a>
+                </td>
+            </tr>
+        </table>
+        <h1>Compra tu película aquí</h1>
+        <h3>Puedes hacer click en una de las carteleras para seleccionar tu película</h3>
+        <form method="post" enctype="text/plain" action="">
+            <div style="text-align: center;">
+                <p>Película: </p>
+                <iframe src="" width="100px" frameborder="0" name="peli"></iframe>
+            </div>
+            <fieldset>
+                <legend>Función</legend>
+                <table align="center" style="width: 500px;">
+                    <tr>
+                        <td>
+                            <label for="hor">Hora: </label>
+                            <input type="time" name="hor" id="hor">
+                        </td>
+                        <td>
+                            <label for="Fecha">Fecha: </label>
+                            <input type="date" name="Fecha" id="Fecha">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Información de facturación</legend>
+                <table align="center" style="height: 125px; width: 500px;">
+                    <tr>
+                        <td>
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        </td>
+                        <td>
+                            <label for="apellidos">Apellidos:</label><br>
+                            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label for="direc">Dirección de facturación: </label>
+                            <input type="text" name="direc" size="50" id="direc" placeholder="Dirección">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Método de pago</legend>
+                <table align="center" style="height: 150px; width: 500px;">
+                    <tr>
+                        <td rowspan="3">
+                            <label for="metod">Tarjeta:</label><br>
+                            <select name="metod" size="3" id="metod">
+                                <option value="mastercard">Mastercard</option>
+                                <option value="visa">Visa</option>
+                                <option value="American Express">American Express</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="ntarj">Numero de tarjeta: </label>
+                            <input type="text" name="ntarj" id="ntarj">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fcad">Fecha de caducidad: </label>
+                            <input type="month" size="5" maxlength="5" name="fcad" id="fcad">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cds">Código de seguridad: </label>
+                            <input type="password" size="3" maxlength="3" name="cds" id="cds">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <div style="text-align: center;"><input type="reset" name="res" id="res"><input type="submit" value="Comprar" name="sub" id="sub"></div>
+        </form>
+    </body>
+</html>
